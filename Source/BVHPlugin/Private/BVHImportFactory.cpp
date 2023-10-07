@@ -249,6 +249,7 @@ UAnimSequence* UBVHImportFactory::ImportAnimation(USkeleton* Skeleton, UObject* 
 
 	float PreviousSequenceLength = DestSeq->GetPlayLength();
 	IAnimationDataController& Controller = DestSeq->GetController();
+	Controller.InitializeModel();
 	Controller.OpenBracket(LOCTEXT("ImportAnimation_Bracket", "Importing Animation"));
 
 	//This destroy all previously imported animation raw data
