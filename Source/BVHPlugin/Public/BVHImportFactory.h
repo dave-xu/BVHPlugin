@@ -49,7 +49,7 @@ class BVHPLUGIN_API UBVHImportFactory : public UFactory, public FReimportHandler
 	virtual int32 GetPriority() const override;
 	//~ End FReimportHandler Interface
 
-	UAnimSequence* UBVHImportFactory::ImportAnimation(USkeleton* Skeleton, UObject* Outer, FBVHImporter* importer);
+	UAnimSequence* ImportAnimation(USkeleton* Skeleton, UObject* Outer, FBVHImporter* importer);
 
 
 };

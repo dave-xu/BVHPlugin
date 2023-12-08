@@ -267,7 +267,7 @@ UAnimSequence* UBVHImportFactory::ImportAnimation(USkeleton* Skeleton, UObject* 
 		{
 			for (const FFloatCurve& Curve : DestSeq->GetDataModel()->GetFloatCurves())
 			{
-				const FAnimationCurveIdentifier CurveId(Curve.Name, ERawCurveTrackTypes::RCT_Float);
+				const FAnimationCurveIdentifier CurveId(Curve.GetName(), ERawCurveTrackTypes::RCT_Float);
 				Controller.ScaleCurve(CurveId, 0.f, ScaleFactor);
 			}
 		}
